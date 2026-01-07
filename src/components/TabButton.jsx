@@ -1,8 +1,8 @@
-export default function TabButton({label, onSelect}){
-    
+export default function TabButton({label, isSelected, ...props}) {
+    console.log('Rendering TabButton:');
     return( 
     <li>
-        <button onClick={onSelect}>{label}</button>
+        <button className={isSelected ? "active" : undefined} {...props}>{label}</button>
     </li>
         
     );
